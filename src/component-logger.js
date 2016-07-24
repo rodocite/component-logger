@@ -3,10 +3,10 @@ const elasticsearch = require('elasticsearch')
 class ComponentLogger {
   constructor(host) {
     this.connection = ((host = 'localhost:9200') => {
-      return new elasticsearch.Client({
-        host: host
-      })
-    })(host)
+        return new elasticsearch.Client({
+          host: host
+        })
+      })(host)
   }
 
   sendProps(componentName, props) {
